@@ -56,6 +56,7 @@ class Menu extends Component {
 
     return (
       <Layout pathname={this.props.router.pathname}>
+        <h2>Pizzas with Pizzaz</h2>
         <Cart items={this.state.items}/>
         {contents}
       </Layout>
