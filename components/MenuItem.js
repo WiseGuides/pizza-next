@@ -23,7 +23,7 @@ class MenuItem extends React.Component {
             <h5>{name}</h5>
             <p className="left">{description}</p>
             <button onClick={() => addToCart(this.state)}>Add</button>
-            <input type="number" min="1" className="number" value={this.state.quantity} onChange={(event) => {this.setState({quantity: parseInt(event.target.value) })}} />
+            <input type="number" min="1" className="number" value={this.state.quantity} onChange={(event) => { this.setState({ quantity: parseInt(event.target.value) }) }} />
             <span className="pricetag">{price}</span>
           </div>
         </section>
