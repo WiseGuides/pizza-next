@@ -1,0 +1,1 @@
+export default () => <footer>&copy; 2018 Wise Guides Pizzeria and Waste Removal</footer>;
