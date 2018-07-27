@@ -33,7 +33,7 @@ class Company extends Component {
         <Testimonial author="Mad Dog Coll">
         As a small businessman myself, I appreciate the personal touch Wise Guides used on a competitor who just wouldn't be reasonable. We'll definitely be using Wise Guides again the next time we need 'pizza'.
         </Testimonial>
-        <ContactForm contact={this.processContactRequest} />
+        <ContactForm />
       </Layout>
     );
   }

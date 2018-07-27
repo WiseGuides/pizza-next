@@ -7,6 +7,19 @@ class ContactForm extends React.Component {
     this.state = {};
   }
 
+  processContactRequest = ({ name, email, leo }) => {
+    if (name === undefined || email === undefined) {
+      alert('We need both your name and your email to proceed.')
+    }
+
+    if (!leo) {
+      alert("Sorry, we can't help law enforcement officers.");
+    } else {
+      alert(`Thanks for contacting us, ${name}. Someone will contact you at ${email} shortly`);
+    }
+  }
+
+
   render() {
     return (
       <section className="left contact">
@@ -20,7 +33,7 @@ class ContactForm extends React.Component {
       <div>
         <input type="checkbox" id="no-rat" onChange={ (event) => this.setState({leo: event.target.checked})} /> <label htmlFor="no-rat">I am not a law enforcement agent.</label>
       </div>
-      <button id="contact" onClick={() => this.props.contact(this.state)}>Send</button>
+      <button id="contact" onClick={() => this.processContactRequest(this.state)}>Send</button>
     </section>
     );
   }
